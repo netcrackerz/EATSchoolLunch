@@ -1,0 +1,43 @@
+Application---
+id : household_id
+
+HouseHold ---- 
+id : application_id
+
+Person ---- 
+id : personType(1) : firstName : middleInit : lastName
+
+Applicant ---
+id : household_id : adult_id : street : city : state : zip : phone : email
+
+Adult ----
+id : person_id
+
+SsnDigit
+id : household_id : lastFour
+
+
+
+Child ----
+id : person_id : studentFlag : fosterFlag : runawayFlag : homelessFlag
+
+AdultIncomeType  -----
+id : type(varchar)
+
+PayFrequency  -----D
+id : frequency(varchar)
+
+AdultIncome -----R
+id : adult_id : adultincometype_id : payfrequency_id : amount
+
+ChildIncome ----I
+id : payfrequency_id : amount
+
+AssistanceProgram ---D 
+id : programName  
+
+AssistanceProgramPrticipant ---R
+id : : assistanceprogram_id : household_id : : caseNumber
+
+
+
